@@ -25,8 +25,7 @@ export function ResumeUploadForm() {
     try {
       const formData = new FormData(e.currentTarget);
       await uploadResume(formData);
-      router.push("/dashboard");
-      router.refresh();
+      router.replace("/dashboard");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to upload resume");
     } finally {

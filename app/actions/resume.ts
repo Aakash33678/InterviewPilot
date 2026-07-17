@@ -36,7 +36,7 @@ export async function uploadResume(formData: FormData) {
   projects: [],
   certifications: [],
   languages: [],
-}
+  }
 
   try {
     parsed = await parseResumeFromBuffer(bufferNode)
